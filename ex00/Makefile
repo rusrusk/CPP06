@@ -18,6 +18,7 @@ $(NAME) : $(OBJS)
 		$(CC) $(OBJS) -o $(NAME)
 
 $(OBJSDIR)/%.o : %.cpp
+		mkdir -p '$(@D)'
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
